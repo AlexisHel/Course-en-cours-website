@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+  <title>Accueil</title>
+  <link rel="myteam" href="Team.html">
+  <link rel="myteam" href="index.html">
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+
+
+
+          </div>
+
+
+          <ul>
+
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Projet.html">Projet</a></li>
+            <li><a href="Csc.html">Courses en Cours</a></li>
+            <li><a href="Team.html">Equipe</a></li>
+            <li><a href="#descriptionduproje" data-after="">Contact</a></li>
+
+          </ul>
+
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+    </div>
+
+  </section>
+  <div id="banane">
+
+
+    <div class="container1">
+      <div class="info">
+
+        <h1>The Bat Project
+
+        </h1>
+
+
+      </div>
+    </div>
+
+    <div class="slider">
+      <img src="img/left-arrow.png" id="prev" />
+      <div class="preview">
+        <img src="img/Gran.jpg" class="active thumb" />
+        <img src="img/Groupe.jpg" class="thumb" />
+        <img src="img/small3.png" class="thumb" />
+        <img src="img/small4.png" class="thumb" />
+        <img src="img/small5.png" class="thumb" />
+      </div>
+      <img src="img/right-arrow.png" id="next" />
+    </div>
+  </div>
+
+
+
+
+
+
+  <section id="descriptionduprojet">
+    <div class="contact-item1">
+
+      <div class="contact-info">
+        <h1>Nous sommes des élèves de la classe de première PArI du lycée Blaise Pascal de Colmar et nous participons
+          cette année au concours
+          national pédagogique ’’Course en Cours’’ qui aura lieu au printemps à Mulhouse. Cet évènement
+          vise à promouvoir les filières scientifiques et technologiques et à découvrir les métiers de l’industrie.
+          Notre projet consiste à concevoir;
+          <h1>- une voiture motorisée électriquement a taille réduite qui affrontera d’autres équipes de la région</h1>
+          <h1>- Un stand</h1>
+          <h1>- Outils de communication (Affiches publicitaires, sites internet etc…)
+            Pour mener à bien ce projet, notre équipe "The Bat Project" </h1>
+
+
+
+      </div>
+    </div>
+
+
+
+    <style>
+      * {
+        box-sizing: border-box
+      }
+
+      body {
+        margin: 0;
+        display: grid;
+        min-height: 100vh;
+        place-items: center;
+      }
+
+      .controle {
+
+        display: grid;
+        grid: 2rem/repeat(2, 1fr);
+        place-items: center
+      }
+
+      button {
+
+        font-size: 2rem;
+        border: none;
+        cursor: pointer;
+        background: #eee
+      }
+
+
+      .contenu-carrousel {
+
+        margin: 5rem auto;
+        width: 300px;
+        height: 200px;
+        position: relative;
+        perspective: 1000px
+      }
+
+      .carrousel {
+
+        height: 100%;
+        width: 100%;
+
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+
+      }
+
+      .carrousel div {
+
+        backface-visibility: hidden;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, .6);
+        position: absolute;
+        width: 300px;
+        height: 200px;
+        outline: 1px solid transparent
+      }
+
+      .carrousel div:nth-child(1) {
+
+        transform: rotateY(0) translateZ(270px);
+        background: url(1.jpg) no-repeat center center/cover
+      }
+
+      .carrousel div:nth-child(2) {
+
+        transform: rotateY(60deg) translateZ(270px);
+        background: url(2.jpg) no-repeat center center/cover
+      }
+
+      .carrousel div:nth-child(3) {
+
+        transform: rotateY(120deg) translateZ(270px);
+        background: url(3.jpg) no-repeat center center/cover
+      }
+
+      .carrousel div:nth-child(4) {
+
+        transform: rotateY(180deg) translateZ(270px);
+        background: url(4.jpg) no-repeat center center/cover
+      }
+
+      .carrousel div:nth-child(5) {
+
+        transform: rotateY(240deg) translateZ(270px);
+        background: url(5.jpg) no-repeat center center/cover
+      }
+
+      .carrousel div:nth-child(6) {
+
+        transform: rotateY(300deg) translateZ(270px);
+        background: url(6.jpg) no-repeat center center/cover
+      }
+    </style>
+
+    <body>
+
+      <div class="contenu-carrousel">
+        <div class="carrousel">
+          <div></div>
+
+
+
+          <div><img src="img/trace.jpg"></div>
+          <div><img src="img/Vialis.png"></div>
+          <div><img src="img/Rally.png"></div>
+          <div><img src="img/Azurimprime.png"></div>
+          <div><img src="img/Femat.png"></div>
+        </div>
+      </div>
+
+      <div class=controle>
+        <button onclick="carrousel('-')">❮</button>
+        <button onclick="carrousel('')">❯</button>
+      </div>
+      <script>var angle = 0; function carrousel(sign) { spinner = document.querySelector(".carrousel"); if (!sign) { angle = angle - 60 } else { angle = angle + 60 } spinner.setAttribute("style", "transform:rotateY(" + angle + "deg);") }</script>
+
+
+
+
+    </body>
+
+  </section>
+
+
+
+
+
+  <!-- Contact Section -->
+  <section id="descriptionduproje">
+
+    <body>
+      <div class="contacttitle">
+        <h11> Nous contacter : </h11>
+      </div>
+    </body>
+    <div class="contact container">
+
+
+      <div class="contact-item1"></div>
+
+      <div class="contact-items">
+
+        <a href="https://www.instagram.com/the.bat.project/" target="_blank" rel="nofollow"
+          class="footer-social-link footer-social-link-facebook">
+          <div class="contact-item">
+            <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></div>
+            <div class="contact-info">
+              <h1>Instagram :</h1>
+
+            </div>
+        </a>
+      </div>
+
+
+      <div class="contact-item">
+        <a href="EMail.html" class="footer-social-link footer-social-link-facebook">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
+          <div class="contact-info">
+            <h1>Email : </h1>
+
+
+          </div>
+        </a>
+      </div>
+      <div class="contact-item">
+        <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /></div>
+        <div class="contact-info">
+          <h1>Address </h1>
+          <h2>France, Alsace, Colmar, Lycée Blaise P ascal</h2>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1>Site fait avec coeur par toute l'équipe</h1>
+      </div>
+      <h2>The Bat Project</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="https://www.instagram.com/the.bat.project/" target="_blank" rel="nofollow"
+            class="footer-social-link footer-social-link-facebook">
+            <img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png">
+
+
+          </a>
+        </div>
+
+
+
+
+      </div>
+      <p>© Tous droits réservés | The Bat Project 2023</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+  
+
+
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
+
+
+</body>
+
+<html>
